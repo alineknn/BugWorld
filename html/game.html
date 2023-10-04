@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bug-World</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="game">
+        <h1>Bugs World</h1>
+    <canvas id="board" class="board" width="600" height="400"></canvas>
+    
+    <script src="../lib/jasmine-4.6.0/jasmine.js"></script>
+    <script src="../lib/jasmine-4.6.0/jasmine-html.js"></script>
+    <script src="../lib/jasmine-4.6.0/boot0.js" defer="defer"></script>
+
+    <script type="module" src="../src/instr.js"></script>
+    <script type="module" src="../src/model.js"></script>
+
+    <script type="module" src="../src/bug.js"></script>
+    <script type="module" src="../src/world.js"></script>
+    
+    <script type="module" src="../src/ui.js"></script>
+</div>
+    <div class="settings">
+        <a href="options.html"><button class="options-btn">Options</button></a>
+        <button class="quit" onclick=quit()>Quit</button>
+        <ul class="settings-list">
+            <li>Iterations: 100</li>
+            <li>Amount of undetected food:</li>
+            <li>Red bugs remaining:</li>
+            <li>Red bugs killed:</li>
+            <li>Food brought home for red bugs:</li>
+            <li>Black bugs remaining:</li>
+            <li>Black bugs killed:</li>
+            <li>Food brought home for black bugs:</li>
+        </ul>
+    </div>
+
+    <div class="logs">
+        <textarea class="logs-area">Logs will be here...</textarea>
+    </div>
+
+    <script>
+        function quit() {
+            if (confirm('Are you sure you want to quit?'))
+                location.href = 'game-end.html'
+        }
+        </script>
+    
+</body>
+
+</html>
